@@ -25,12 +25,23 @@ export default function ListItem(props: {list: FourmItem[]}){
                 <div className="list-item" key={i}>
                 <Link href={`/detail/${_id}`}> <h4> {title}</h4> </Link>
                 <Link href={`/edit/${_id}`}> 수정 </Link>
-                <span onClick={()=>{
+                <span onClick={(e: React.MouseEvent<HTMLButtonElement>)=>{
+                   const targetElement = e.currentTarget as HTMLElement;
                    fetch('/api/post/delete', {
                     method:"POST",
                     body: _id,
+                }).then((r)=>{
+                   r.json();
                 }).then(()=>{
-                    console.log("성공");
+
+                  //이부분 재 참고
+                  if(targetElement.parentElement){
+                      targetElement.parentElement.style.opacity="0";
+                    setTimeout(()=>{
+                      targetElement.parentElement? targetElement.parentElement.style.display='none':
+                      "";
+                    },1000)
+                  }
                 })
                 }}>삭제</span>
                 <p>{content}</p>
