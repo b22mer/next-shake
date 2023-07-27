@@ -8,6 +8,7 @@ export const authOptions = {
       clientId: '',
       clientSecret: '',
     }),
+    
   ],
   secret : '0000',
   adapter: MongoDBAdapter(connectDB)

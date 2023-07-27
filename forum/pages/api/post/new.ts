@@ -1,6 +1,13 @@
 import { connectDB } from "@/src/util/database";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../auth/[...nextauth]";
 
 export default async function handler(req:any, res:any){
+
+    const session = await getServerSession(authOptions);
+    console.log(session)
+
+
 
     if(req.method ==='POST'){
         console.log(req.body);
