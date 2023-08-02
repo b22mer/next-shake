@@ -16,7 +16,7 @@ export default async function Detail (props:any){
             <h4>상세 페이지</h4>
             <h4 >{result.title}</h4>
             <p>{result.content}</p>
-            <Comment/>
+            <Comment _id={result._id.toString()}/>
         </div>
     )
 }
