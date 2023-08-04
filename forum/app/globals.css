@@ -38,10 +38,12 @@ input {
 }
 
 button {
-    padding: 10px 15px;
+    padding: 5px 10px;
     background: lightgray;
     border: none;
+    font-size: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 a {
@@ -52,6 +54,8 @@ a {
 .navbar {
     background: white;
     padding: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar a {
@@ -67,4 +71,51 @@ a {
 .list-item {
     opacity: 1;
     transition: all 1s;
+}
+
+.nav-sub {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-sub>div {
+    font-size: 5px;
+    margin-right: 5px;
+}
+
+.set-btn {
+    background-color: lightgray;
+    margin-right: 5px;
+    font-size: 4px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.det-title {
+    /* background-color: red; */
+    padding: 3px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.det-content {
+    padding: 3px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 10px;
+    height: 200px;
+    background-color: aliceblue;
+}
+
+.com-title {
+    font-size: 13px;
+    padding: 3px;
+}
+
+.com-content {
+    padding: 3px;
+    /* background-color: red; */
+    /* border-radius: 5px; */
 }

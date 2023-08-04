@@ -12,10 +12,10 @@ export default async function Detail (props:any){
     // console.log(props.params.idx);
 
     return(
-        <div>
+        <div className="p-20">
             <h4>상세 페이지</h4>
-            <h4 >{result.title}</h4>
-            <p>{result.content}</p>
+            <h4 className="det-title">{result.title}</h4>
+            <p className="det-content">{result.content}</p>
             <Comment _id={result._id.toString()}/>
         </div>
     )

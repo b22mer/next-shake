@@ -29,10 +29,11 @@ export default async function RootLayout({
 
       <body className={inter.className}>
         <div className="navbar">
-          <Link href="/" className="logo">Appleforum</Link>
+          <Link href="/" className="logo">Bananaforum</Link>
           <Link href="/list">List</Link>
+          <Link href="/write">Write</Link>
           {
-            !session? <LoginBtn/>: <span><h4>{session.user?.name}</h4><LogoutBtn/></span>
+            !session? <LoginBtn/>: <div className='nav-sub'><div>{session.user?.name}</div> <LogoutBtn/></div>
           }
          
         </div>

@@ -24,8 +24,8 @@ export default function ListItem(props: {list: FourmItem[]}){
             return(
                 <div className="list-item" key={i}>
                 <Link href={`/detail/${_id}`}> <h4> {title}</h4> </Link>
-                <Link href={`/edit/${_id}`}> 수정 </Link>
-                <span onClick={(e: React.MouseEvent<HTMLButtonElement>)=>{
+                <span className="set-btn"><Link href={`/edit/${_id}`}> 수정 </Link></span>
+                <span  className="set-btn" onClick={(e: React.MouseEvent<HTMLButtonElement>)=>{
                    const targetElement = e.currentTarget as HTMLElement;
                    fetch('/api/post/delete', {
                     method:"POST",
